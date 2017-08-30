@@ -1,9 +1,11 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+const db = require('../queries');
 
+router.get('/api/posts', db.getAllPosts);
+router.get('/api/post/:id', db.getSinglePost);
+router.post('/api/posts', db.createPost);
+router.put('/api/posts/:id', db.updatePost);
+router.delete('/api/posts/:id', db.deletePost);
 module.exports = router;

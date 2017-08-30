@@ -1,11 +1,11 @@
-DROP DATABASE IF EXISTS posts;
-CREATE DATABASE posts;
+DROP DATABASE IF EXISTS weblog_db;
+CREATE DATABASE weblog_db;
 
-\c posts;
+\c weblog_db;
 
 CREATE TABLE posts (
   ID SERIAL PRIMARY KEY,
-  created TIMESTAMP defualt current_timestamp,
+  created TIMESTAMP default current_timestamp,
   author VARCHAR,
   location POINT,
   title VARCHAR,
@@ -15,8 +15,8 @@ CREATE TABLE posts (
 
 INSERT INTO posts (author, location, title, content, tags)
   VALUES (
-    'tzmanics', 
-    (51.5033640,-0.1276250), 
+    '@tzmanics', 
+    '(51.5033640,-0.1276250)', 
     'Dat Test Tho',
     'That very first test post that you hope will not be the last!',
     'test, practice, learning'
