@@ -1,0 +1,33 @@
+{
+  "name": "2017_weblog-rest-api",
+  "version": "0.0.0",
+  "description": "A postgres RESTful API for blog posts",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "nodemon ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tzmanics/2017_weblog-REST-API.git"
+  },
+  "keywords": [
+    "RESTful",
+    "API",
+    "blog"
+  ],
+  "author": "Tara Z. Manicsic <tzmanics@gmail.com> (https://tzmanics.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tzmanics/2017_weblog-REST-API/issues"
+  },
+  "homepage": "https://github.com/tzmanics/2017_weblog-REST-API#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "morgan": "^1.8.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
